@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="nl-be">
+<head>
+<meta charset="utf-8">
+<meta name="decscription" content="btw">
+<meta name="keywords" content="btw, berekenen">
+<meta name="author" content="Ann Demarsin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script
+src="https://code.jquery.com/jquery-3.1.0.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+$("#knopbedragexcl").click(function() {
+var excl = $("#bedragexcl").val();
+var btw = 0.21;
+var btwtot = 1.21;
+window.alert(
+    "De BTW die je moet betalen is " + excl * btw + " euro en het totaalbedrag, incl. BTW dat je moet betalen is " + excl * btwtot + " euro.");
+});
+$("#knopbedragincl").click(function() {
+var incl = $("#bedragincl").val();
+var btw2 = 1.21;
+var btw3 = 0.173553719;
+window.alert(
+    "Het bedrag excl. BTW dat je moet betalen is " + incl / btw2 + " euro en de BTW die je moet betalen is " + incl * 0.173553719 + " euro.");
+});
+});
+</script>
+<title>BTW calculator</title>
+    <style>
+        input{
+            margin: 10px 10px 10px 10px;
+        }
+        </style>
+</head> 
+<body>
+<section>
+<h1>BTW berekenen</h1>
+<p>Met deze eenvoudige calculator kan je makkelijk de BTW (21%) berekenen die je moet betalen. Je kan kiezen of je de prijs zonder BTW ingeeft of de totale prijs, inclusief BTW.</p>
+<form id="calculator">
+<fieldset>   
+    <legend><strong>BTW-calculator</strong></legend>
+        <label for="bedragexcl">Van welk bedrag wil je de BTW en het bedrag incl BTW berekenen?</label>
+        <input type="number" id="bedragexcl" name="bedragexcl">
+        <label for="knopbedragexcl"></label>
+        <input type="button" id="knopbedragexcl" name="knopbedragexcl" value="Bereken."><br><br>
+        <label for="bedragincl">Wat is het totaalbedrag inclBTW waarvan je de BTW en het bedrag excl BTW wilt berekenen?  </label>
+        <input type="number" id="bedragincl" name="bedragincl">
+        <label for="knopbedragincl"></label>
+        <input type="button" id="knopbedragincl" name="knopbedragincl" value="Bereken">
+   
+</fieldset>
+</form>
+</section>
+    <noscript>Om deze website optimaal te gebruiken is het noodzakelijk om JavaScript te activeren.</noscript>
+</body>
+</html>
